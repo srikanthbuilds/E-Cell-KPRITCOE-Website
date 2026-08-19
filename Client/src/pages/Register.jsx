@@ -441,11 +441,7 @@ export default function Registration() {
                 </option>
 
                 <option value="EUREKA!">
-                  EUREKA!
-                </option>
-
-                <option value="Other">
-                  Other
+                  EUREKA PITCHING 2K26
                 </option>
               </select>
             </div>
