@@ -3247,3 +3247,57 @@ a {
   }
 
 }
+
+
+/* =========================================
+   REFERENCE PDF BUTTON
+========================================= */
+
+.reference-pdf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 12px;
+  padding: 11px 19px;
+
+  border: 1px solid #cfd5e1;
+  border-radius: 7px;
+
+  background: #ffffff;
+  color: #172b57;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 4px 12px rgba(23, 43, 87, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.reference-pdf-button:hover {
+  transform: translateY(-2px);
+
+  border-color: #f15a24;
+  color: #f15a24;
+
+  box-shadow:
+    0 8px 20px rgba(241, 90, 36, 0.12);
+}
+
+.reference-pdf-button:active {
+  transform: translateY(0);
+}
+
+.reference-pdf-button:focus-visible {
+  outline: 3px solid rgba(241, 90, 36, 0.2);
+  outline-offset: 2px;
+}
