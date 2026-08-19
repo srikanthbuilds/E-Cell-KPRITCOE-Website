@@ -3022,25 +3022,87 @@ a {
   font-weight: 800;
 }
 
-/* NEC ID */
+/* =========================================
+   NEC ID BADGE
+========================================= */
 
 .eureka-nec-id {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
 
-  margin-left: 5px;
-  padding: 5px 10px;
+  margin-left: 6px;
+  padding: 7px 13px;
 
-  border-radius: 6px;
+  border: 1px solid rgba(23, 43, 87, 0.15);
+  border-radius: 7px;
 
-  background: #172b57;
+  background: linear-gradient(
+    135deg,
+    #172b57 0%,
+    #243f78 100%
+  );
+
   color: #ffffff;
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
+  letter-spacing: 0.6px;
 
-  letter-spacing: 0.5px;
+  line-height: 1;
+
+  box-shadow:
+    0 5px 14px rgba(23, 43, 87, 0.18);
+
+  vertical-align: middle;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
+/* NEC ID label */
+.eureka-nec-id::before {
+  content: "NEC";
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 3px 6px;
+
+  border-radius: 4px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+}
+
+/* Hover */
+.eureka-nec-id:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(
+    135deg,
+    #f15a24 0%,
+    #ff6b35 100%
+  );
+
+  box-shadow:
+    0 8px 20px rgba(241, 90, 36, 0.22);
+}
+
+/* Strong value */
+.eureka-nec-id strong {
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
 
 /* =========================================
    EUREKA REGISTRATION BUTTON
