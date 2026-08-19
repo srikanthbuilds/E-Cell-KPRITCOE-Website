@@ -203,6 +203,15 @@ export default function Registration() {
             Register for Eureka
           </a>
 
+          <a
+  href="https://pdflink.to/55e2c5eb/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="reference-pdf-button"
+>
+  📄 View Reference PDF
+</a>
+
         </div>
 
 
