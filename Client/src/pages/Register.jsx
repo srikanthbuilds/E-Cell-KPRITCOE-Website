@@ -452,21 +452,23 @@ export default function Registration() {
 
 
             <div className="form-group">
-              <label htmlFor="team_size">
-                Team Size
-              </label>
+  <label htmlFor="team_size">
+    Team Size
+  </label>
 
-              <input
-                id="team_size"
-                name="team_size"
-                type="number"
-                min="1"
-                value={formData.team_size}
-                onChange={handleChange}
-                placeholder="Enter team size"
-                required
-              />
-            </div>
+  <select
+    id="team_size"
+    name="team_size"
+    value={formData.team_size}
+    onChange={handleChange}
+    required
+  >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+</div>
 
           </div>
 
