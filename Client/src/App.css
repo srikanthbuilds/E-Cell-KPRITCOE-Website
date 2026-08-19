@@ -3047,50 +3047,114 @@ a {
 ========================================= */
 
 .eureka-registration-button {
-  display: inline-flex;
+  position: relative;
 
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 
-  gap: 8px;
+  padding: 13px 22px;
 
-  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
 
-  border: none;
-  border-radius: 7px;
+  background: linear-gradient(
+    135deg,
+    #f15a24 0%,
+    #ff6b35 100%
+  );
 
-  background: #f15a24;
   color: #ffffff;
 
   font-size: 14px;
   font-weight: 800;
+  letter-spacing: 0.2px;
 
   text-decoration: none;
-
   cursor: pointer;
 
+  overflow: hidden;
+
   box-shadow:
-    0 6px 18px rgba(241, 90, 36, 0.18);
+    0 6px 18px rgba(241, 90, 36, 0.22);
 
   transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
-.eureka-registration-button:hover {
-  transform: translateY(-2px);
+/* Shine effect */
+.eureka-registration-button::before {
+  content: "";
 
-  background: #172b57;
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.55s ease;
+}
+
+/* Arrow */
+.eureka-registration-button::after {
+  content: "→";
+
+  font-size: 17px;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease;
+}
+
+/* Hover */
+.eureka-registration-button:hover {
+  transform: translateY(-3px);
+
+  background: linear-gradient(
+    135deg,
+    #172b57 0%,
+    #243f78 100%
+  );
 
   box-shadow:
-    0 10px 25px rgba(23, 43, 87, 0.18);
+    0 12px 30px rgba(23, 43, 87, 0.28);
 
   color: #ffffff;
 }
 
+.eureka-registration-button:hover::before {
+  left: 140%;
+}
+
+.eureka-registration-button:hover::after {
+  transform: translateX(4px);
+}
+
+/* Click */
 .eureka-registration-button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 15px rgba(23, 43, 87, 0.22);
+}
+
+/* Keyboard accessibility */
+.eureka-registration-button:focus-visible {
+  outline: 3px solid rgba(241, 90, 36, 0.35);
+  outline-offset: 3px;
 }
 
 
