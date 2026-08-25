@@ -102,6 +102,38 @@ function Home() {
 </div>
       </section>
 
+            {/* E-Certificates */}
+      <section className="certificates-section">
+
+        <div className="section-heading">
+
+          <p className="section-label">
+            PARTICIPANTS
+          </p>
+
+          <h2>
+            Get Your E-Certificate
+          </h2>
+
+          <p>
+            Event participants can access and download their
+            certificates from the official E-Cell KPRIT-COE folder.
+          </p>
+
+          <a
+            href="https://drive.google.com/drive/folders/19d_mQ6rPS9zFFRMhp46DxL37B1WaoFac?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-button"
+          >
+            Access E-Certificates
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </section>
+
 
       {/* What We Do */}
       <section className="what-we-do">
