@@ -121,14 +121,24 @@ function Home() {
           </p>
 
           <a
-            href="https://drive.google.com/drive/folders/19d_mQ6rPS9zFFRMhp46DxL37B1WaoFac?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="primary-button"
-          >
-            Access E-Certificates
-            <span>→</span>
-          </a>
+  href="https://drive.google.com/drive/folders/19d_mQ6rPS9zFFRMhp46DxL37B1WaoFac?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="primary-button"
+>
+  Access E-Certificates
+  <span>→</span>
+</a>
+
+<a
+  href="https://drive.google.com/drive/folders/1A-Wxo93xZJ7F5S30XkhL9S-0pNc-sMFb?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="secondary-button"
+>
+  Merit Certificates
+  <span>→</span>
+</a>
 
         </div>
 
