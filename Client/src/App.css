@@ -3301,3 +3301,68 @@ a {
   outline: 3px solid rgba(241, 90, 36, 0.2);
   outline-offset: 2px;
 }
+
+/* Events Highlight */
+
+.events-highlight {
+  padding: 90px 6%;
+}
+
+.events-highlight-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.events-highlight-text {
+  max-width: 520px;
+}
+
+.events-highlight-text h2 {
+  margin: 12px 0 20px;
+}
+
+.events-highlight-text > p:not(.section-label) {
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.events-highlight-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.events-highlight-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.events-highlight-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+  .events-highlight {
+    padding: 60px 6%;
+  }
+
+  .events-highlight-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .events-highlight-text {
+    max-width: 100%;
+  }
+
+}
