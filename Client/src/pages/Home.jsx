@@ -101,6 +101,56 @@ function Home() {
   </div>
 </div>
       </section>
+      {/* Events Highlight */}
+<section className="events-highlight">
+
+  <div className="events-highlight-content">
+
+    <div className="events-highlight-text">
+
+      <p className="section-label">
+        EVENT HIGHLIGHT
+      </p>
+
+      <h2>
+        Eureka Pitching
+      </h2>
+
+      <p>
+        A platform where innovative ideas come to life. 
+        Eureka Pitching brought together aspiring entrepreneurs 
+        to present their ideas, receive valuable feedback and 
+        take their first step towards building impactful ventures.
+      </p>
+
+      <div className="events-highlight-meta">
+        <span>📅 24 August 2026</span>
+        <span>📍 D Block Auditorium</span>
+      </div>
+
+      <Link
+        to="/events"
+        className="primary-button"
+      >
+        Explore Events
+        <span>→</span>
+      </Link>
+
+    </div>
+
+    <div className="events-highlight-image">
+
+      <img
+        src="/eureka-team.jpg"
+        alt="E-Cell KPRIT-COE Eureka Pitching Team"
+      />
+
+    </div>
+
+  </div>
+
+</section>
+      
 
             {/* E-Certificates */}
       <section className="certificates-section">
