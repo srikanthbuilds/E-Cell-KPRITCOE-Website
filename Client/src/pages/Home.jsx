@@ -173,9 +173,14 @@ function previousImage() {
     <div className="events-highlight-image">
 
       <img
-    src={highlightImages[currentImage]}
-    alt="E-Cell KPRIT-COE Eureka Pitching Team"
-  />
+  src={highlightImages[currentImage]}
+  alt="E-Cell KPRIT-COE Eureka Pitching Team"
+  className={
+    isImageVisible
+      ? "highlight-image-visible"
+      : "highlight-image-hidden"
+  }
+/>
 
   <button
     className="highlight-prev"
