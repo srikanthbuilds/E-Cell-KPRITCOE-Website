@@ -1,9 +1,30 @@
 
-import { Link, useNavigate } from "react-router-dom";import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 function Home() {
   const navigate = useNavigate();
   const [events, setEvents] = useState([]);
+  const [currentImage, setCurrentImage] = useState(0);
+
+const highlightImages = [
+  "/eureka-team.jpg",
+  "/eureka-team-2.jpg",
+  "/eureka-team-3.jpg",
+];
+
+function nextImage() {
+  setCurrentImage(
+    (currentImage + 1) % highlightImages.length
+  );
+}
+
+function previousImage() {
+  setCurrentImage(
+    (currentImage - 1 + highlightImages.length) %
+      highlightImages.length
+  );
+}
 
   useEffect(() => {
     fetchEvents();
@@ -141,9 +162,25 @@ function Home() {
     <div className="events-highlight-image">
 
       <img
-    src="/eureka-team.jpg"
+    src={highlightImages[currentImage]}
     alt="E-Cell KPRIT-COE Eureka Pitching Team"
   />
+
+  <button
+    className="highlight-prev"
+    onClick={previousImage}
+    aria-label="Previous image"
+  >
+    ‹
+  </button>
+
+  <button
+    className="highlight-next"
+    onClick={nextImage}
+    aria-label="Next image"
+  >
+    ›
+  </button>
 
     </div>
 
