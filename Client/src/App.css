@@ -3417,3 +3417,12 @@ a {
 .events-highlight-image img {
   transition: opacity 0.35s ease-in-out;
 }
+.highlight-image-visible {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.highlight-image-hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
