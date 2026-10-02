@@ -6,6 +6,7 @@ function Home() {
   const navigate = useNavigate();
   const [events, setEvents] = useState([]);
   const [currentImage, setCurrentImage] = useState(0);
+  const [isImageVisible, setIsImageVisible] = useState(true);
 
 const highlightImages = [
   "/eureka-team.jpg",
@@ -14,16 +15,26 @@ const highlightImages = [
 ];
 
 function nextImage() {
-  setCurrentImage(
-    (currentImage + 1) % highlightImages.length
-  );
+  setIsImageVisible(false);
+
+  setTimeout(() => {
+    setCurrentImage(
+      (currentImage + 1) % highlightImages.length
+    );
+    setIsImageVisible(true);
+  }, 300);
 }
 
 function previousImage() {
-  setCurrentImage(
-    (currentImage - 1 + highlightImages.length) %
-      highlightImages.length
-  );
+  setIsImageVisible(false);
+
+  setTimeout(() => {
+    setCurrentImage(
+      (currentImage - 1 + highlightImages.length) %
+        highlightImages.length
+    );
+    setIsImageVisible(true);
+  }, 300);
 }
 
   useEffect(() => {
