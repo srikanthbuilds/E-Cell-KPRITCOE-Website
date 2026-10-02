@@ -141,9 +141,12 @@ function Home() {
     <div className="events-highlight-image">
 
       <img
-        src="/eureka-team.jpg"
-        alt="E-Cell KPRIT-COE Eureka Pitching Team"
-      />
+    src={images[currentImage]}
+    alt="E-Cell KPRIT-COE Eureka Pitching Team"
+  />
+      <button className="next-image" onClick={nextImage}>
+    →
+  </button>
 
     </div>
 
