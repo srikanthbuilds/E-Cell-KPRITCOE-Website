@@ -111,69 +111,74 @@ function Events() {
 
         {/* =====================================================
             2. ILLUMINATE - ENTREPRENEURSHIP WORKSHOP
-            NEW CARD
+            STATIC CARD - NOT SUPABASE
         ===================================================== */}
 
-        {events
-          .filter((event) =>
-            event.title?.toLowerCase().includes("illuminate")
-          )
-          .map((event) => {
-            const date = formatDate(event.event_date);
+        <div className="full-event-card illuminate-event-card">
 
-            return (
-              <div
-                className="full-event-card illuminate-event-card"
-                key={event.id}
-                onClick={() => navigate(`/events/${event.id}`)}
-                style={{ cursor: "pointer" }}
-              >
+          {/* Poster */}
+          <div className="illuminate-poster">
 
-                {/* Poster */}
-                <div className="illuminate-poster">
-                  <img
-                    src="/illuminate-poster.jpg"
-                    alt="Illuminate - Entrepreneurship Workshop"
-                  />
-                </div>
+            <img
+              src="/illuminate-poster.jpg"
+              alt="Illuminate - Entrepreneurship Workshop"
+            />
+
+          </div>
 
 
-                {/* Date */}
-                <div className="full-date">
-                  <span>{date.month}</span>
-                  <strong>{date.day}</strong>
-                  <small>{date.year}</small>
-                </div>
+          {/* Event Date */}
+          <div className="full-date">
+
+            <span>DATE</span>
+
+            <strong>--</strong>
+
+            <small>2026</small>
+
+          </div>
 
 
-                {/* Event Information */}
-                <div className="full-event-content">
+          {/* Event Information */}
+          <div className="full-event-content">
 
-                  <h2>{event.title}</h2>
+            <p className="event-type">
+              ENTREPRENEURSHIP WORKSHOP
+            </p>
 
-                  <p>{event.description}</p>
+            <h2>
+              Illuminate – Entrepreneurship Workshop
+            </h2>
 
-                  {event.event_time && (
-                    <p>🕒 {event.event_time}</p>
-                  )}
+            <p>
+              Join us for Illuminate, an entrepreneurship workshop
+              designed to help students explore entrepreneurial
+              thinking, understand the startup ecosystem, and
+              transform ideas into meaningful opportunities.
+            </p>
 
-                  {event.location && (
-                    <p>📍 {event.location}</p>
-                  )}
+            <p>
+              🕒 Event Time: <strong>--</strong>
+            </p>
 
-                  <Link
-                    to="/register"
-                    className="primary-button"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Register Now →
-                  </Link>
+            <p>
+              📍 Location: <strong>--</strong>
+            </p>
 
-                </div>
 
-              </div>
-            );
-          })}
+            {/* Google Form Registration */}
+            <a
+              href="YOUR_GOOGLE_FORM_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button"
+            >
+              Register Now →
+            </a>
+
+          </div>
+
+        </div>
 
       </section>
 
