@@ -54,9 +54,14 @@ function Navbar() {
           About Us
         </Link>
 
-        <Link to="/register" className="register-button">
-          Register Now
-        </Link>
+        <a
+  href="https://forms.gle/VUxxYNZ4wXhbAjvV7"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="register-button"
+>
+  Register Now
+</a>
 
       </nav>
 
