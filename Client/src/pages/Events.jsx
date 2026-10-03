@@ -52,11 +52,84 @@ function Events() {
         </p>
       </section>
 
+
       <section className="events-list">
 
+
         {/* =====================================================
-            1. EXISTING EUREKA PITCHING CARD
-            DO NOT CHANGE
+            1. ILLUMINATE – ENTREPRENEURSHIP WORKSHOP
+            STATIC CARD
+        ===================================================== */}
+
+        <div className="full-event-card illuminate-event-card">
+
+          {/* Poster */}
+          <div className="illuminate-poster">
+            <img
+              src="/illuminate-poster.jpg"
+              alt="Illuminate - Entrepreneurship Workshop"
+            />
+          </div>
+
+
+          {/* Date */}
+          <div className="full-date illuminate-date">
+            <span>DATE</span>
+            <strong>--</strong>
+            <small>2026</small>
+          </div>
+
+
+          {/* Event Content */}
+          <div className="full-event-content">
+
+            <p className="event-type">
+              ENTREPRENEURSHIP WORKSHOP
+            </p>
+
+            <h2>
+              Illuminate – Entrepreneurship Workshop
+            </h2>
+
+            <p>
+              Join us for Illuminate, an entrepreneurship workshop
+              designed to help students explore entrepreneurial
+              thinking, understand the startup ecosystem, and
+              transform ideas into meaningful opportunities.
+            </p>
+
+            <div className="illuminate-event-details">
+
+              <p>
+                🕒 <strong>Event Time:</strong> --
+              </p>
+
+              <p>
+                📍 <strong>Location:</strong> --
+              </p>
+
+            </div>
+
+
+            {/* Google Form Registration */}
+            <a
+              href="YOUR_GOOGLE_FORM_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-button illuminate-register"
+            >
+              Register Now →
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        {/* =====================================================
+            2. EXISTING EUREKA PITCHING CARD
+            REGISTER BUTTON REMOVED
         ===================================================== */}
 
         {events
@@ -94,91 +167,11 @@ function Events() {
                     <p>📍 {event.location}</p>
                   )}
 
-                  <Link
-                    to="/register"
-                    className="primary-button"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Register Now →
-                  </Link>
-
                 </div>
 
               </div>
             );
           })}
-
-
-        {/* =====================================================
-            2. ILLUMINATE - ENTREPRENEURSHIP WORKSHOP
-            STATIC CARD - NOT SUPABASE
-        ===================================================== */}
-
-        <div className="full-event-card illuminate-event-card">
-
-          {/* Poster */}
-          <div className="illuminate-poster">
-
-            <img
-              src="/illuminate-poster.jpg"
-              alt="Illuminate - Entrepreneurship Workshop"
-            />
-
-          </div>
-
-
-          {/* Event Date */}
-          <div className="full-date">
-
-            <span>DATE</span>
-
-            <strong>--</strong>
-
-            <small>2026</small>
-
-          </div>
-
-
-          {/* Event Information */}
-          <div className="full-event-content">
-
-            <p className="event-type">
-              ENTREPRENEURSHIP WORKSHOP
-            </p>
-
-            <h2>
-              Illuminate – Entrepreneurship Workshop
-            </h2>
-
-            <p>
-              Join us for Illuminate, an entrepreneurship workshop
-              designed to help students explore entrepreneurial
-              thinking, understand the startup ecosystem, and
-              transform ideas into meaningful opportunities.
-            </p>
-
-            <p>
-              🕒 Event Time: <strong>--</strong>
-            </p>
-
-            <p>
-              📍 Location: <strong>--</strong>
-            </p>
-
-
-            {/* Google Form Registration */}
-            <a
-              href="YOUR_GOOGLE_FORM_LINK"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button"
-            >
-              Register Now →
-            </a>
-
-          </div>
-
-        </div>
 
       </section>
 
