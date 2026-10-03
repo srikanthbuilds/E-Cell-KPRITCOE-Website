@@ -74,8 +74,8 @@ function Events() {
 
           {/* Date */}
           <div className="full-date illuminate-date">
-            <span>DATE</span>
-            <strong>--</strong>
+            <span>OCT</span>
+            <strong>17</strong>
             <small>2026</small>
           </div>
 
@@ -101,11 +101,11 @@ function Events() {
             <div className="illuminate-event-details">
 
               <p>
-                🕒 <strong>Event Time:</strong> --
+                🕒 <strong>Event Time: </strong> 10:00 AM 
               </p>
 
               <p>
-                📍 <strong>Location:</strong> --
+                📍 <strong>Location:</strong> KPRIT-COE
               </p>
 
             </div>
