@@ -112,7 +112,7 @@ function Events() {
 
             {/* Google Form Registration */}
             <a
-              href="YOUR_GOOGLE_FORM_LINK"
+              href="https://forms.gle/VUxxYNZ4wXhbAjvV7"
               target="_blank"
               rel="noopener noreferrer"
               className="primary-button illuminate-register"
