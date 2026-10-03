@@ -3486,3 +3486,120 @@ a {
   }
 
 }
+
+
+
+/* =========================================
+   ILLUMINATE EVENT CARD
+   Entrepreneurship Workshop
+   ========================================= */
+
+/* Main Illuminate Card */
+.illuminate-event-card {
+  display: block;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   ILLUMINATE POSTER
+   ========================================= */
+
+.illuminate-poster {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.illuminate-poster img {
+  width: 100%;
+  height: 320px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Poster Hover Effect */
+.illuminate-event-card:hover .illuminate-poster img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================
+   DATE SECTION
+   ========================================= */
+
+.illuminate-event-card .full-date {
+  margin-top: 22px;
+}
+
+
+/* =========================================
+   EVENT CONTENT
+   ========================================= */
+
+.illuminate-event-card .full-event-content {
+  padding-top: 0;
+}
+
+
+/* =========================================
+   REGISTER BUTTON
+   ========================================= */
+
+.illuminate-event-card .primary-button {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .illuminate-poster img {
+    height: 280px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .illuminate-poster img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+
+    object-fit: cover;
+  }
+
+  .illuminate-event-card .full-date {
+    margin-top: 20px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .illuminate-poster img {
+    height: auto;
+    max-height: 360px;
+  }
+
+}
