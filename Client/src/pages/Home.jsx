@@ -422,6 +422,153 @@ function previousImage() {
 
         </div>
 
+                <div className="event-cards">
+
+          {/* =================================================
+              1. ILLUMINATE – ENTREPRENEURSHIP WORKSHOP
+          ================================================= */}
+
+          <article className="event-card illuminate-home-card">
+
+            <div className="illuminate-home-poster">
+
+              <img
+                src="/illuminate-poster.jpg"
+                alt="Illuminate - Entrepreneurship Workshop"
+              />
+
+            </div>
+
+            <div className="event-info">
+
+              <p className="event-type">
+                ENTREPRENEURSHIP WORKSHOP
+              </p>
+
+              <h3>
+                Illuminate – Entrepreneurship Workshop
+              </h3>
+
+              <p>
+                Join us for Illuminate, an entrepreneurship
+                workshop designed to help students explore
+                entrepreneurial thinking, understand the
+                startup ecosystem, and transform ideas into
+                meaningful opportunities.
+              </p>
+
+              <div className="event-meta">
+
+                <span>
+                  🕒 Event Time: --
+                </span>
+
+                <span>
+                  📍 Location: --
+                </span>
+
+              </div>
+
+              <a
+                href="https://forms.gle/VUxxYNZ4wXhbAjvV7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="event-register"
+              >
+                Register →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          {/* =================================================
+              2. EXISTING EUREKA PITCHING
+          ================================================= */}
+
+          {events.length > 0 ? (
+
+            events
+              .filter((event) =>
+                event.title?.toLowerCase().includes("eureka")
+              )
+              .map((event) => (
+
+                <article
+                  className="event-card"
+                  key={event.id}
+                  onClick={() =>
+                    navigate(`/events/${event.id}`)
+                  }
+                  style={{ cursor: "pointer" }}
+                >
+
+                  <div className="event-date">
+
+                    <span>
+                      {formatMonth(event.event_date)}
+                    </span>
+
+                    <strong>
+                      {formatDate(event.event_date)}
+                    </strong>
+
+                    <small>
+                      {formatYear(event.event_date)}
+                    </small>
+
+                  </div>
+
+
+                  <div className="event-info">
+
+                    <p className="event-type">
+                      E-CELL EVENT
+                    </p>
+
+                    <h3>
+                      {event.title}
+                    </h3>
+
+                    <p>
+                      {event.description}
+                    </p>
+
+                    <div className="event-meta">
+
+                      <span>
+                        📅{" "}
+                        {formatDate(event.event_date)}{" "}
+                        {formatMonth(event.event_date)}{" "}
+                        {formatYear(event.event_date)}
+                      </span>
+
+                      <span>
+                        📍{" "}
+                        {event.location || "KPRIT-COE"}
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </article>
+
+              ))
+
+          ) : (
+
+            <div className="no-events">
+              <p>
+                No upcoming events at the moment.
+              </p>
+            </div>
+
+          )}
+
+        </div>
+
       </section>
 
     </main>
