@@ -3649,3 +3649,18 @@ a {
   }
 
 }
+
+.illuminate-poster {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.illuminate-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
