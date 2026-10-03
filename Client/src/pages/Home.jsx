@@ -430,14 +430,7 @@ function previousImage() {
 
           <article className="event-card illuminate-home-card">
 
-            <div className="illuminate-home-poster">
-
-              <img
-                src="/illuminate-poster.jpg"
-                alt="Illuminate - Entrepreneurship Workshop"
-              />
-
-            </div>
+            
 
             <div className="event-info">
 
