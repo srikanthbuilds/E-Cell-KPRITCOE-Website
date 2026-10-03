@@ -84,7 +84,6 @@ function Events() {
           <div className="full-event-content">
 
             <p className="event-type">
-              ENTREPRENEURSHIP WORKSHOP
             </p>
 
             <h2>
