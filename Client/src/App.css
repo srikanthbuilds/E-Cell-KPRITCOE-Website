@@ -3603,3 +3603,49 @@ a {
   }
 
 }
+
+
+
+/* =========================================
+   ILLUMINATE POSTER
+========================================= */
+
+.illuminate-poster {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.illuminate-poster img {
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.4s ease;
+}
+
+.illuminate-event-card:hover .illuminate-poster img {
+  transform: scale(1.01);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .illuminate-poster img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+}
