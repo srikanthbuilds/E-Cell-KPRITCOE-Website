@@ -54,50 +54,126 @@ function Events() {
 
       <section className="events-list">
 
-        {events.map((event) => {
-          const date = formatDate(event.event_date);
+        {/* =====================================================
+            1. EXISTING EUREKA PITCHING CARD
+            DO NOT CHANGE
+        ===================================================== */}
 
-          return (
-            <div
-              className="full-event-card"
-              key={event.id}
-              onClick={() => navigate(`/events/${event.id}`)}
-              style={{ cursor: "pointer" }}
-            >
+        {events
+          .filter((event) =>
+            event.title?.toLowerCase().includes("eureka")
+          )
+          .map((event) => {
+            const date = formatDate(event.event_date);
 
-              <div className="full-date">
-                <span>{date.month}</span>
-                <strong>{date.day}</strong>
-                <small>{date.year}</small>
+            return (
+              <div
+                className="full-event-card"
+                key={event.id}
+                onClick={() => navigate(`/events/${event.id}`)}
+                style={{ cursor: "pointer" }}
+              >
+
+                <div className="full-date">
+                  <span>{date.month}</span>
+                  <strong>{date.day}</strong>
+                  <small>{date.year}</small>
+                </div>
+
+                <div className="full-event-content">
+
+                  <h2>{event.title}</h2>
+
+                  <p>{event.description}</p>
+
+                  {event.event_time && (
+                    <p>🕒 {event.event_time}</p>
+                  )}
+
+                  {event.location && (
+                    <p>📍 {event.location}</p>
+                  )}
+
+                  <Link
+                    to="/register"
+                    className="primary-button"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Register Now →
+                  </Link>
+
+                </div>
+
               </div>
+            );
+          })}
 
-              <div className="full-event-content">
 
-                <h2>{event.title}</h2>
+        {/* =====================================================
+            2. ILLUMINATE - ENTREPRENEURSHIP WORKSHOP
+            NEW CARD
+        ===================================================== */}
 
-                <p>{event.description}</p>
+        {events
+          .filter((event) =>
+            event.title?.toLowerCase().includes("illuminate")
+          )
+          .map((event) => {
+            const date = formatDate(event.event_date);
 
-                {event.event_time && (
-                  <p>🕒 {event.event_time}</p>
-                )}
+            return (
+              <div
+                className="full-event-card illuminate-event-card"
+                key={event.id}
+                onClick={() => navigate(`/events/${event.id}`)}
+                style={{ cursor: "pointer" }}
+              >
 
-                {event.location && (
-                  <p>📍 {event.location}</p>
-                )}
+                {/* Poster */}
+                <div className="illuminate-poster">
+                  <img
+                    src="/illuminate-poster.jpg"
+                    alt="Illuminate - Entrepreneurship Workshop"
+                  />
+                </div>
 
-                <Link
-                  to="/register"
-                  className="primary-button"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Register Now →
-                </Link>
+
+                {/* Date */}
+                <div className="full-date">
+                  <span>{date.month}</span>
+                  <strong>{date.day}</strong>
+                  <small>{date.year}</small>
+                </div>
+
+
+                {/* Event Information */}
+                <div className="full-event-content">
+
+                  <h2>{event.title}</h2>
+
+                  <p>{event.description}</p>
+
+                  {event.event_time && (
+                    <p>🕒 {event.event_time}</p>
+                  )}
+
+                  {event.location && (
+                    <p>📍 {event.location}</p>
+                  )}
+
+                  <Link
+                    to="/register"
+                    className="primary-button"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Register Now →
+                  </Link>
+
+                </div>
 
               </div>
-
-            </div>
-          );
-        })}
+            );
+          })}
 
       </section>
 
